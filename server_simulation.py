@@ -3,12 +3,10 @@ import random
 import time
 from datetime import datetime
 
-# قائمة الـ Hive IDs الموجودة في DB
 HIVE_IDS = ["HBX-2938471-TT"]
 
 API_URL = "http://ip:8000/api/sensor/data/"
 def generate_fake_data(hive_id):
-    """توليد بيانات وهمية لكل Hive"""
     data = {
         "hive_id": hive_id,
         "temperature": round(random.uniform(30, 50), 2),
